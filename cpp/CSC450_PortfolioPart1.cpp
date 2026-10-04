@@ -56,3 +56,14 @@ void countDown()
         cout << "Count Down: " << i << endl;
     }
 }
+
+int main()
+{
+    thread threadOne(countUp);
+    threadOne.join();
+
+    thread threadTwo(countDown);
+    threadTwo.join();
+
+    return 0;
+}
