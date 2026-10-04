@@ -21,7 +21,7 @@ CREATE a function that counts upward
     END FOR
 END function 
 
-CREATE a function that counts downard
+CREATE a function that counts downward
     FOR each number from 20 through 0
         PRINT the number
     END FOR
