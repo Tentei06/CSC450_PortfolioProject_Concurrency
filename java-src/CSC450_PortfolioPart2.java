@@ -38,21 +38,31 @@ WAIT for the second thread to finish
 END
 */
 
-public class CSC450_PortfolioPart2
-{
-    public static void countUp()
-    {
-        for (int i = 0; i <= 20; i++)
-        {
+public class CSC450_PortfolioPart2 {
+    public static void countUp() {
+        for (int i = 0; i <= 20; i++) {
             System.out.println("Count Up: " + i);
         }
     }
 
-    public static void countDown()
-    {
-        for (int i = 20; i >= 0; i--)
-        {
+    public static void countDown() {
+        for (int i = 20; i >= 0; i--) {
             System.out.println("Count Down: " + i);
+        }
+    }
+
+    public static void main(String[] args) {
+        try {
+            Thread threadOne = new Thread(() -> countUp());
+            threadOne.start();
+            threadOne.join();
+
+            Thread threadTwo = new Thread(() -> countDown());
+            threadTwo.start();
+            threadTwo.join();
+        } catch (InterruptedException e) {
+            Thread.currentThread().interrupt();
+            System.out.println("Thread execution was interrupted.");
         }
     }
 }
