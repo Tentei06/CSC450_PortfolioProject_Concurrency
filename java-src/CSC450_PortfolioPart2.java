@@ -1,7 +1,3 @@
-public class CSC450_PortfolioPart2{
-
-}
-
 /*
 CSC450 Programming III
 Portfolio Project - Part 2
@@ -41,3 +37,22 @@ WAIT for the second thread to finish
 
 END
 */
+
+public class CSC450_PortfolioPart2
+{
+    public static void countUp()
+    {
+        for (int i = 0; i <= 20; i++)
+        {
+            System.out.println("Count Up: " + i);
+        }
+    }
+
+    public static void countDown()
+    {
+        for (int i = 20; i >= 0; i--)
+        {
+            System.out.println("Count Down: " + i);
+        }
+    }
+}
