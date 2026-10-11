@@ -1,6 +1,9 @@
 # Prerequisites
 *.d
 
+# Java compiled files
+*.class
+
 # Compiled Object files
 *.slo
 *.lo
